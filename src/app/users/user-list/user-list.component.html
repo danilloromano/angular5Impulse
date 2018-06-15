@@ -1,0 +1,45 @@
+<div class="container">
+
+  <div class="--m-b-20 flex flex--row flex--content-end --m-t-50">
+    <!-- <button mat-raised-button (click)="redirect()" class="btn-accent-defalt" type="button">
+      <span>Adicionar</span>
+    </button> -->
+    <button mat-fab (click)="redirect()" type="button" class="--m-r-15">
+      <mat-icon class="mat-icon material-icons">add</mat-icon>
+    </button>
+  </div>
+
+  <p-table #dt [value]="users" id="table" [paginator]="true" [rows]="5" [scrollable]="true" [style]="{width:'100%'}">
+
+      <ng-template pTemplate="header">
+          <tr id="th-table">
+              <th class="col-xs">Id</th>
+              <th class="col-md">Nome</th>
+              <th class="col-md">Sobrenome</th>
+              <th class="col-lg">Email</th>
+              <th class="col-xs"></th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-user>
+          <tr>
+              <td class="--alingn-center col-xs">{{user.id}}</td>
+              <td class="--alingn-center col-md">{{user.name}}</td>
+              <td class="--alingn-center col-md">{{user.last_name}}</td>
+              <td class="--alingn-center col-lg">{{user.email}}</td>
+              <td class="--alingn-center col-xs">
+                <mat-menu #appMenu="matMenu">
+                        <ng-template matMenuContent let-name="name">
+                          <button mat-menu-item [routerLink]="['/user-register', user.id]">Editar</button>
+                          <button mat-menu-item (click)="fuckRemove(user)">Remover</button>
+                        </ng-template>
+                      </mat-menu>
+
+                      <button mat-icon-button [matMenuTriggerFor]="appMenu" [matMenuTriggerData]="{name: 'Sally'}">
+                            <mat-icon>more_vert</mat-icon>
+                      </button>
+              </td>
+          </tr>
+      </ng-template>
+  </p-table>
+
+</div>

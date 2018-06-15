@@ -1,0 +1,40 @@
+.inputcustom {
+    height: 50px;
+    border: none;
+    color: #222;
+    padding-top: 20px;
+    border-bottom: 2px solid #2D8728;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+ }
+
+ .labelCustom {
+  position: relative;
+  text-transform: uppercase;
+  top: 20px;
+  left: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #8c8c8c;
+  transition: all .2s ease-in-out;
+ }
+
+
+ .mat-input-container .mat-form-field-infix input {
+    caret-color: #2D8728 !important;
+ }
+
+ .mat-input-underline.mat-form-field-underline {
+   background-color:#2D8728;
+ }
+
+ .mat-focused .mat-form-field-underline .mat-form-field-ripple  {
+  background-color:#2D8728 !important;
+  caret-color: #2D8728 !important;
+}
+
+.mat-form-field-label.mat-input-placeholder.mat-form-field-placeholder {
+  caret-color: #2D8728 !important;
+  color: #2D8728 !important;
+}

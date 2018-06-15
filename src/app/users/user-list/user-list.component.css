@@ -1,0 +1,44 @@
+.user-content {
+    position: relative;
+ }
+
+ .mainContent {
+    position: relative;
+    top: 180px;
+ }
+
+ .tableWrapper {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+ }
+
+ .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 70%;
+ }
+
+ .header-table {
+    min-height: 64px;
+    padding: 8px 24px 0;
+ }
+
+ .mat-form-field {
+    font-size: 14px;
+    width: 30%;
+  }
+
+.--space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.--mt-lg {
+  margin-top: 5%;
+}
+

@@ -1,0 +1,18 @@
+.wrapp-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imgLogo {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      margin-top: 5%;
+      height: 50%;
+      width: 50%;
+    }
+    
+    .urso-home {
+      width:100%;
+      height: 50%;
+    }

@@ -1,0 +1,86 @@
+.btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.mat-raised-button {
+    &.btn-defalt {
+        width: 80px;
+        height: 30px;
+        background-color: #2D8728;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 5px 2px 2px #000000;
+        text-align: center;
+        line-height: 2px;
+        font-family: Creepster;
+    }
+    
+    &.btn-accent-defalt {
+        height: 35px;
+        width: 100px;
+        background-color: #2D8728;
+        color: white;
+        border-radius: 3px;
+        border-color: transparent;
+        box-shadow: 0 5px 5px gray;
+        outline: none;
+    }
+    
+      &.btn-warn-defalt {
+        height: 35px;
+        width: 100px;
+        background-color: rgb(219, 37, 37);
+        color: white;
+        border-radius: 3px;
+        border-color: transparent;
+        box-shadow: 0 5px 5px gray;
+        outline: none;
+      }
+    
+    &.fuck-buttom-icon {
+        padding: 0px!important;
+        background: transparent !important;
+        background-color: transparent !important;
+        border: 0px !important;
+      }
+
+      .btn-text-content {
+        padding: 10px 0;
+      }
+
+}
+
+.mat-icon-button {
+    padding: 0px!important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0px !important;
+}
+
+.mat-menu-panel {
+    button.mat-menu-item {
+        height:35px;
+        font-size: 12px;
+        font-family: 'Creepster', cursive;
+    }
+}
+
+button {
+    &.mat-fab {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    &.mat-accent {
+        background-color: #2D8728;
+    }
+        .mat-button-wrapper {
+            padding: 8px 0px;
+        }
+    }
+}
+
+ 
+

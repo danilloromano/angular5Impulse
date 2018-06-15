@@ -1,0 +1,35 @@
+<div class="aligner"> 
+  <div class ="form-container --half --ronded-border">
+    <div class="aligner"> 
+      <p class="alert-message">{{message}}</p>
+    </div>
+    <form class="form-flex" (submit)='register($event)'>
+      <div class="input-wrapper">
+
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Nome" [(ngModel)]="user.name" name="name">
+        </mat-form-field>
+
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Sobrenome" type="text" [(ngModel)]="user.last_name" name="last_name">
+        </mat-form-field>
+
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Email" [(ngModel)]="user.email" type="email" name="email">
+        </mat-form-field>
+
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Senha" [(ngModel)]="user.password" type="password" name="password">
+        </mat-form-field>
+      </div>
+      <div class="button-wrapper">
+        <button mat-raised-button class="btn-accent-defalt ">
+          <span class="btn-text-content">Salvar</span>  
+        </button>
+        <button mat-raised-button (click)="redirect()" class="btn-warn-defalt --m-l-20 ">
+            <span class="btn-text-content" >Cancelar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div> 

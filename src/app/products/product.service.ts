@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 import { ProductComponent } from './product/product.component';
 
 @Injectable()
-export class UserService {
+export class ProductService {
 
     getProductUrl:string;
     getCategorys:string;
@@ -25,7 +25,7 @@ export class UserService {
         this.http = http;
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json');
-
+        
     }
 
     getProducts():Observable<ProductComponent[]> {

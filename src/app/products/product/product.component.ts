@@ -5,7 +5,7 @@ import { Component, OnInit , Input} from '@angular/core';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductComponent implements OnInit {
 
   id: number;
   @Input() nome: string;
@@ -27,3 +27,4 @@ export class ProductsComponent implements OnInit {
   }
 
 }
+

@@ -37,6 +37,7 @@ import { UserRegisterComponent } from './users/user-register/user-register.compo
 import { UserListComponent } from './users/user-list/user-list.component';
 import {UserService} from './users/user.service';
 import {usersModule} from './users/users.module';
+import { ProductComponent } from './products/product/product.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {usersModule} from './users/users.module';
     UserListComponent,
     LoginComponent,
     HomeComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    ProductComponent
 
   ],
   imports: [

@@ -8,7 +8,6 @@ import { UserRegisterComponent} from './users/user-register/user-register.compon
 
 const appRoutes:Routes = [
     { path:"", component:HomeComponent },
-    { path:"products", component: ProductComponent },
     { path:"product-register", component: ProductRegisterComponent },
     { path:"product-register/:id", component: ProductRegisterComponent },
     { path:"products", component: ProductListComponent },

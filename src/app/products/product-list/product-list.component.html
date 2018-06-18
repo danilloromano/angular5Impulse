@@ -1,3 +1,52 @@
-<p>
-  product-list works!
-</p>
+<div class="container">
+
+  <div class="--m-b-20 flex flex--row flex--content-end --m-t-50">
+    <button mat-fab (click)="redirect()" type="button" class="--m-r-15">
+      <mat-icon class="mat-icon material-icons">add</mat-icon>
+    </button>
+  </div>
+
+
+  <p-table #dt [value]="products" id="table" [paginator]="true" [rows]="5" [scrollable]="true" [style]="{width:'100%'}">
+
+      <ng-template pTemplate="header">
+          <tr id="th-table">
+              <th class="col-xs">Id</th>
+              <th class="col-md">Nome</th>
+              <th class="col-md">Marca</th>
+              <th class="col-md">Custo</th>
+              <th class="col-md">Validade</th>
+              <th class="col-md">Venda</th>
+              <th class="col-md">Descricao</th>
+              <th class="col-md">Quantidade</th>
+              <th class="col-md">Inclusao</th>
+              <th class="col-xs"></th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+          <tr>
+              <td class="--alingn-center col-xs">{{product.id}}</td>
+              <td class="--alingn-center col-md">{{product.nome}}</td>
+              <td class="--alingn-center col-md">{{product.marca}}</td>
+              <td class="--alingn-center col-md">{{product.custo | number}}</td>
+              <td class="--alingn-center col-md">{{product.validade}}</td>
+              <td class="--alingn-center col-md">{{product.venda | number}}</td>
+              <td class="--alingn-center col-md">{{product.descricao}}</td>
+              <td class="--alingn-center col-md">{{product.quantidade}}</td>
+              <td class="--alingn-center col-md">{{product.data | date:'yyyy-MM-dd'}}</td>
+              <td class="--alingn-center col-xs">
+                <mat-menu #appMenu="matMenu">
+                  <ng-template matMenuContent let-name="name">
+                    <button mat-menu-item [routerLink]="['/product-register', product.id]">Editar</button>
+                    <button mat-menu-item (click)="fuckRemove(product)">Remover</button>
+                  </ng-template>
+                </mat-menu>
+
+                <button mat-icon-button [matMenuTriggerFor]="appMenu" [matMenuTriggerData]="{name: 'Sally'}">
+                      <mat-icon>more_vert</mat-icon>
+                </button>
+              </td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>

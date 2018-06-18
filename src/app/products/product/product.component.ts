@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
   @Input() lucro :string;
   @Input() data :string;
 
-  @Input()users:Object[];
+  @Input()products:Object[];
 
   constructor() { }
 

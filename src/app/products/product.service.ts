@@ -1,4 +1,3 @@
-import { Component, OnInit, Inject } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs'; 
 import { Injectable } from '@angular/core';
@@ -25,7 +24,6 @@ export class ProductService {
         this.http = http;
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json');
-        
     }
 
     getProducts():Observable<ProductComponent[]> {
@@ -40,7 +38,7 @@ export class ProductService {
         .map(res => res.json())
     }
 
-    regist(product: ProductComponent):Observable<Response> {
+    registProduct(product: ProductComponent):Observable<Response> {
 
         if (product.id) {
             return this.http.put(this.putUrl + '/' + product.id, JSON.stringify(product), 
@@ -51,24 +49,8 @@ export class ProductService {
                 { headers: this.headers }); 
     }
 
-    remove(product: ProductComponent): Observable<Response> {
+    removeProduct(product: ProductComponent): Observable<Response> {
         return this.http
         .delete(this.deleteUrl + '/' + product.id);
-    }
-}
-
-export class registerMessage {
-
-    constructor(private _message:string, private _include: boolean) {
-        this._message = _message;
-        this._include = _include;
-    }
-
-    getMessage(): string {
-        return this._message;
-    }
-
-    isInclude(): boolean {
-        return this._include;
     }
 }

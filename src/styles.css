@@ -653,3 +653,41 @@ p-paginator .ui-paginator .ui-paginator-page.ui-state-active {
 
 .col-lg {
   width: 400px; }
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.form-container {
+  padding: 20px; }
+
+.--half {
+  width: 50%; }
+
+.--ronded-border {
+  border-radius: 3px; }
+
+.form-flex {
+  display: flex;
+  flex-direction: column; }
+
+.input-wrapper {
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.input-wrapper .mat-form-field {
+  margin: 10px; }
+
+.input-half {
+  width: 45%; }
+
+.title {
+  color: #231F20;
+  font-family: 'Creepster', cursive; }
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px; }

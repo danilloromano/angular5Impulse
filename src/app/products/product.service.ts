@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product.component';
 export class ProductService {
 
     getProductUrl:string;
+    getProductId:string;
     getCategorys:string;
     postUrl:string;
     deleteUrl:string;
@@ -15,7 +16,8 @@ export class ProductService {
     http:Http;
 
 
-    constructor(http:Http){
+    constructor(http:Http) {
+        this.getProductId = 'http://localhost:8080/ProductData'
         this.getProductUrl = 'http://localhost:8080/productData';
         this.postUrl = 'http://localhost:8080/products/newProduct';
         this.deleteUrl = 'http://localhost:8080/products/deleteProduct';
@@ -28,8 +30,16 @@ export class ProductService {
 
     getProducts():Observable<ProductComponent[]> {
         return this.http
-        .get(this.getProductUrl)
+        .get(this.getProductUrl + '/' )
         .map(res => res.json())
+    }
+
+    getProductByID(product: ProductComponent) {
+        if(product.id) {
+            return this.http
+            .get(this.getProductId + '/' + product.id)
+            .map(res => res.json())
+        }
     }
 
     getCategory():Observable<ProductComponent[]> {
@@ -37,6 +47,7 @@ export class ProductService {
         .get(this.getCategorys)
         .map(res => res.json())
     }
+
 
     registProduct(product: ProductComponent):Observable<Response> {
 

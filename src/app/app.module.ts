@@ -38,6 +38,7 @@ import { ProductComponent } from './products/product/product.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { ProductRegisterComponent } from './products/product-register/product-register.component';
 import { ProductReportComponent } from './products/product-report/product-report.component';
+import { Form2colComponent } from './form2col/form2col.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ProductReportComponent } from './products/product-report/product-report
     UserRegisterComponent,
     ProductListComponent,
     ProductRegisterComponent,
-    ProductReportComponent
+    ProductReportComponent,
+    Form2colComponent
 
   ],
   imports: [

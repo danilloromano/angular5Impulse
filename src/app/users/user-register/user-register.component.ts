@@ -3,7 +3,7 @@ import { UserComponent } from '../user/user.component';
 import { UserService } from '../user.service';
 import { UserListComponent } from '../user-list/user-list.component';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { Form2colComponent} from '../../form2col/form2col.component';
 
 
 @Component({
@@ -33,9 +33,9 @@ export class UserRegisterComponent {
 
       if(id) {
         this.service.getUsersForId(id)
-            .subscribe(
-              user => this.user = user,
-              erro => console.log(erro));    
+          .subscribe(
+            user => this.user = user,
+            erro => console.log(erro));    
       }            
     });
 

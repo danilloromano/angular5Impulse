@@ -2,6 +2,7 @@ import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs'; 
 import { Injectable } from '@angular/core';
 import { ProductComponent } from './product/product.component';
+import { Categorys } from './category.model';
 
 @Injectable()
 export class ProductService {
@@ -22,7 +23,7 @@ export class ProductService {
         this.postUrl = 'http://localhost:8080/products/newProduct';
         this.deleteUrl = 'http://localhost:8080/products/deleteProduct';
         this.putUrl = 'http://localhost:8080/products/updateProduct';
-        this.getCategorys = 'http://localhost:8080/productData/category'
+        this.getCategorys = 'http://localhost:8080/categorias'
         this.http = http;
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json');
@@ -42,7 +43,7 @@ export class ProductService {
         }
     }
 
-    getCategory():Observable<ProductComponent[]> {
+    getCategory():Observable<Categorys[]> {
         return this.http
         .get(this.getCategorys)
         .map(res => res.json())

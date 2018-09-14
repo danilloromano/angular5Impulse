@@ -13,7 +13,8 @@ export class ProductComponent implements OnInit {
   @Input() custo: number;
   @Input() validade :string;
   @Input() venda :number;
-  @Input() categoris_id :number;
+  @Input() categoria_nome :number;
+  @Input() categoria_id :number;
   @Input() descricao :string;
   @Input() quantidade :number;
   @Input() lucro :string;

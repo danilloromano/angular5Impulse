@@ -5,8 +5,7 @@ import { ProductRegisterComponent } from './product-register/product-register.co
 import { ProductReportComponent } from './product-report/product-report.component';
 import { ProductService } from './product.service';
 import { CommonModule } from '@angular/common';
-import { UserRegisterComponent } from '../users/user-register/user-register.component';
-import { UserListComponent } from '../users/user-list/user-list.component';
+import { Categorys } from './category.model';
 
 
 @NgModule({
@@ -14,6 +13,7 @@ import { UserListComponent } from '../users/user-list/user-list.component';
     imports:[CommonModule],
     providers: [ 
         ProductService,
+        Categorys,
         ProductComponent,
         ProductRegisterComponent,
         ProductListComponent,

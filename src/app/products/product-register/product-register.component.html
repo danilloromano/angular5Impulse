@@ -1,3 +1,60 @@
-<p>
-  product-register works!
-</p>
+<div class="aligner --m-t-50"> 
+  <div class ="form-container --half --ronded-border --m-b-50">
+    <div class="aligner"> 
+      <p class="alert-message"></p>
+    </div>
+    <form class="form-flex" (submit)='registerProduct($event)'>
+      <div class="input-wrapper">
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Nome" [(ngModel)]="product.nome" type="text" name="nome">
+        </mat-form-field>
+  
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Marca" type="text" [(ngModel)]="product.marca" name="marca">
+        </mat-form-field>
+  
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Custo" [(ngModel)]="product.custo" type="text" name="custo">
+        </mat-form-field>
+  
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Data de validade" [(ngModel)]="product.validade" type="date" name="validade">
+        </mat-form-field>
+
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Venda" [(ngModel)]="product.venda" type="number" name="venda">
+        </mat-form-field>
+
+        <mat-form-field class="input-half">
+          <mat-select placeholder="Categoria">
+            <mat-option *ngFor="let category of categorys" [value]="produto.categoria_id">
+              {{ category.nome }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Descricao" [(ngModel)]="product.descricao" type="text" name="descricao">
+        </mat-form-field>
+  
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Quantidade" [(ngModel)]="product.quantidade" type="number" name="quantidade">
+        </mat-form-field>
+
+        <mat-form-field class="input-half">
+          <input matInput placeholder="Data da compra" [(ngModel)]="product.data" type="date" name="data">
+        </mat-form-field>
+      </div>
+
+      <div class="button-wrapper">
+        <button mat-raised-button class="btn-accent-defalt ">
+          <span class="btn-text-content">Salvar</span>  
+        </button>
+        <button mat-raised-button (click)="redirectBanger()" class="btn-warn-defalt --m-l-20 ">
+            <span class="btn-text-content" >Cancelar</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -8,20 +8,17 @@ import {FormsModule} from '@angular/forms'
 import { routing } from './app.routs';
 import { AppComponent } from './app.component';
 import {AccordionModule} from 'primeng/accordion';     
-import {MenuItem} from 'primeng/components/common/api'; 
 import { DataTableModule } from 'primeng/datatable'; 
 import {TableModule} from 'primeng/table';
 import {
-  MatTableModule,
   MatInputModule,
-  MatPaginatorModule,
   MatProgressSpinnerModule,
   MatButtonModule,
   MatSortModule,
   MatIconModule,
   MatMenuModule,
-  MatIcon
- 
+  MatSelectModule,
+
 } from '@angular/material';
 
 import { HeaderComponent } from './header/header.component';
@@ -71,7 +68,9 @@ import { Form2colComponent } from './form2col/form2col.component';
     usersModule,
     productModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
+
   ],
 
 

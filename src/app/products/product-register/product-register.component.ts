@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductComponent } from '../product/product.component';
 import { ProductService } from '../product.service';
 import { ProductListComponent } from '../product-list/product-list.component';
+import { Categorys } from '../category.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Form2colComponent} from '../../form2col/form2col.component';
 
 
 @Component({
@@ -15,12 +15,15 @@ import { Form2colComponent} from '../../form2col/form2col.component';
 export class ProductRegisterComponent implements OnInit {
 
   product: ProductComponent = new ProductComponent;
+  categorie:Categorys;
+  categorys:Object[] = [];
   service: ProductService;
   productList: ProductListComponent;
   route: ActivatedRoute;
   message:string;
 
-  constructor(service:ProductService,productList: ProductListComponent,private router: Router,route: ActivatedRoute) {
+  constructor(categorie:Categorys,service:ProductService,productList: ProductListComponent,private router: Router,route: ActivatedRoute) {
+    this.categorie = categorie;
     this.service = service;
     this.productList = productList;
     this.route = route; 
@@ -39,7 +42,20 @@ export class ProductRegisterComponent implements OnInit {
     });
   }
 
+
+  getCategorys() {
+    this.service.getCategory().subscribe(function(categoryData) {
+      this.categorys = categoryData;
+      console.log(this.categorys)
+    })
+  }
+
+  redirectBanger() {
+    this.router.navigate(['/products'])
+  }
+
   ngOnInit() {
+    this.getCategorys();
   }
 
 }
